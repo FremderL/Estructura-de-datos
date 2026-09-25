@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/Inventario.js"></script>
+    <script src="./js/Producto.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <label for="txtCod">
+                Codigo:
+                <input type="text" id="txtCod" required>
+            </label>
+
+            <label for="txtNom">
+                Nombre:
+                <input type="text" id="txtNom">
+            </label>
+
+            <label for="txtCant">
+                Cantidad:
+                <input type="text" id="txtCant">
+            </label>
+
+            <label for="txtCost">
+                Costo:
+                <input type="text" id="txtCost">
+            </label>
+
+            <button type="button" id="btnAdd">Agregar</button>
+            <button type="reset">Cancelar</button>
+            <button type="button" id="btnDelete">Eliminar</button>
+            <button type="button" id="btnSearch">Buscar</button>
+            <button type="button" id="btnAddInicio">Agregar al Inicio</button>
+            <button type="button" id="btnList">Listar</button>
+            <button type="button" id="btnListInv">Listar Inverso</button>
+            <button type="button" id="btnExtraerPrimero">Extraer Primero</button>
+        </form>
+    </div>
+    <div id="detalles"></div>
+    <script src="./js/App.js"></script>
+</body>
+</html>
