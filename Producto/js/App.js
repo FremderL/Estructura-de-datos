@@ -11,11 +11,11 @@ let miInv=new Inventario();
 const btnAdd=document.getElementById("btnAdd");
 const btnDelete=document.getElementById("btnDelete");
 const btnSearch=document.getElementById("btnSearch");
-const btnAddInicio=document.getElementById("btnAddInicio");
+//const btnAddInicio=document.getElementById("btnAddInicio");
 const btnList=document.getElementById("btnList");
 const btnListInv=document.getElementById("btnListInv");
 const btnExtraerPrimero=document.getElementById("btnExtraerPrimero");
-
+const btnExtraerUltimo=document.getElementById("btnExtraerUltimo");
 
 
 
@@ -66,7 +66,7 @@ btnSearch.addEventListener("click",()=>{
         detalles.innerHTML += "<p> No se encontro el producto con el codigo " + codigo + "</p>"
     }
 })
-
+/** 
 btnAddInicio.addEventListener("click",()=>{
     let codigo = document.getElementById("txtCod").value;
     let nombre = document.getElementById("txtNom").value;
@@ -86,7 +86,7 @@ btnAddInicio.addEventListener("click",()=>{
         detalles.innerHTML += "<p> No se pudo agregar el producto al inicio con el codigo " + codigo + "</p>"
     }
 })
-
+*/
 btnList.addEventListener("click",()=>{
     let detalles = document.getElementById("detalles");
     let productos = miInv.listar();
@@ -116,5 +116,15 @@ btnExtraerPrimero.addEventListener("click",()=>{
         detalles.innerHTML += producto.infoHtml()
     }else {
         detalles.innerHTML += "<p> No se pudo extraer el primer producto</p>"
+    }
+})
+
+btnExtraerUltimo.addEventListener("click",()=>{
+    let detalles = document.getElementById("detalles");
+    let producto = miInv.extraerUltimo();
+    if (producto != null){
+        detalles.innerHTML += producto.infoHtml()
+    }else {
+        detalles.innerHTML += "<p> No se pudo extraer el último producto</p>"
     }
 })
